@@ -1,0 +1,18 @@
+---
+interface Props {
+    id?: string,
+	label: string;
+    url: string;
+    hasIcon: boolean
+    target: string
+}
+
+const { label, url, hasIcon, target } = Astro.props;
+---
+<a href={url} target={target} class="border-stone-900 dark:border-stone-50 border-solid border-[0.5px] w-max px-6 py-2.5 text-sm lg:text-base 1xl:text-lg flex items-center justify-between gap-3 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 uppercase hover:text-stone-50 hover:fill-stone-50 dark:hover:bg-stone-50 dark:hover:text-stone-900 dark:hover:fill-stone-900 transition-all duration-150 group/button hover:bg-stone-900">
+    <span class="w-max block flex-1">{label}</span>
+    {hasIcon &&
+    <span class="size-4 lg:size-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"></path></svg>
+    </span>}
+</a>

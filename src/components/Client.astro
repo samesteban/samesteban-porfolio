@@ -1,0 +1,40 @@
+---
+interface Props {
+    id: string,
+    client: string,
+    description: string,
+    tags: Array<string>,
+    image: string,
+    siteUrl: string
+}
+import Pill from './helpers/Pill.astro';
+import Button from './helpers/Button.astro';
+
+const { id, client, description, tags, image, siteUrl } = Astro.props;
+---
+<div class="w-full py-7 border-t-[1px] border-t-stone-900/50 dark:border-t-stone-50/50 last:border-b-[1px] last:border-b-stone-900/50 last:dark:border-b-stone-50/50 flex flex-col items-start justify-start">
+    <div id={`${id}-content`} data-target={`${id}-target`} class="accordion__content max-md:order-2 opacity-0 max-h-0 overflow-hidden py-0 transition-all duration-500 ease-in-out aria-[expanded=true]:opacity-100 aria-[expanded=true]:max-h-[1500px] md:aria-[expanded=true]:pb-7" aria-labelledby={`${id}-button`} aria-expanded="false">
+        <div class="flex flex-col md:flex-row items-start justify-between gap-4">
+            <div class="image-area w-full md:w-8/12">
+                <img src={image} alt={client} class="w-full h-auto object-center object-contain shadow-xl" />
+            </div>
+            <div class="description w-full md:w-4/12 pb-0 md:py-6 self-stretch flex flex-col items-start justify-between">
+                <p class="text-stone-900 dark:text-stone-50 transition-all duration-300 text-base 1xl:text-xl font-normal mb-6">
+                    {description}
+                </p>
+                <Button label="Ver Sitio" url={siteUrl} hasIcon={false} target="_blank" />
+            </div>
+        </div>
+    </div>
+    <div id={`${id}-button`} data-target={`${id}-target`} class="accordion__button w-full cursor-pointer heading-content flex flex-col md:flex-row items-start md:items-center justify-between gap-4 max-md:aria-[expanded=true]:mb-6 transition-all duration-500" aria-expanded="false" aria-controls={`${id}-content`}>
+        <div class="left-info flex items-center justify-start gap-2">
+            <span class="number text-stone-900 dark:text-stone-50 font-light text-base transition-all duration-300">{id}/</span>
+            <h3 class="text-stone-900 dark:text-stone-50 transition-all duration-300 text-2xl xl:text-3xl 1xl:text-4xl tracking-wide uppercase">{client}</h3>
+        </div>
+        <div class="right-info flex flex-wrap items-center justify-start lg:justify-end gap-2 flex-1">
+            {
+                tags.map(tag => <Pill label={tag} />)
+            }
+        </div>
+    </div>
+</div>

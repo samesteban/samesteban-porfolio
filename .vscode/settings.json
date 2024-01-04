@@ -1,0 +1,14 @@
+{
+  "tailwindCSS.emmetCompletions": true,
+  "editor.formatOnSave": true,
+  "tailwindCSS.lint.invalidApply": "ignore",
+  "tailwindCSS.lint.invalidTailwindDirective": "ignore",
+  "tailwindCSS.lint.invalidVariant": "ignore",
+  "css.lint.unknownAtRules": "ignore",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

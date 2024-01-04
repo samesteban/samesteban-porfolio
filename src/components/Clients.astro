@@ -1,0 +1,81 @@
+---
+import Client from "./Client.astro";
+const CLIENTS = [
+    {
+        id: '01',
+        client: 'UCC Cargo & Logistic Solutions',
+        description: 'Diseño realizado por agencia. Desarrollo a medida de Theme WordPress.',
+        tags: ['wordpress', 'php', 'css/sass', 'jquery', 'javascript', 'para agencia'],
+        image: '/projects/web-ucclog.webp',
+        siteUrl: 'https://web.ucclog.com/'
+    },
+    {
+        id: '02',
+        client: 'San Pedro Equipos Ltda.',
+        description: 'Diseño propio. Desarrollado en HTML5/CSS/JAVASCRIPT/JQUERY con funcionalidades de phpmailer.',
+        tags: ['html5', 'php', 'css/sass', 'jquery', 'javascript'],
+        image: '/projects/web-sanpedro.webp',
+        siteUrl: 'https://sanpedroequipos.cl/'        
+    },
+    {
+        id: '03',
+        client: 'Quality Inspección y Certificaciones',
+        description: 'Diseño propio. Desarrollado en HTML5/CSS/JAVASCRIPT/JQUERY con funcionalidades de phpmailer.',
+        tags: ['html5', 'php', 'css/sass', 'jquery', 'javascript'],
+        image: '/projects/web-quality.webp',
+        siteUrl: 'https://www.qualityic.cl/'        
+    },
+    {
+        id: '04',
+        client: 'Fundo Río Los Ostiones',
+        description: 'Diseño propio. Desarrollado en HTML5/CSS/JAVASCRIPT/JQUERY con funcionalidades de phpmailer.',
+        tags: ['html5', 'php', 'css/sass', 'jquery', 'javascript'],
+        image: '/projects/web-fundo.webp',
+        siteUrl: 'https://www.fundoriolosostiones.cl/'        
+    },
+    {
+        id: '05',
+        client: 'Teletón',
+        description: 'Diseño realizado por agencia. Desarrollo a medida de Theme WordPress. Además se desarrollaron herramientas de accesibilidad a medida, solicitadas por cliente.',
+        tags: ['wordpress', 'php', 'css/sass', 'jquery', 'javascript', 'accesibilidad', 'para agencia'],
+        image: '/projects/web-teleton.webp',
+        siteUrl: 'https://www.teleton.cl/'        
+    },
+]
+---
+<div class="accordion porfolio-list mt-4">
+    {
+        CLIENTS.map(client => <Client {...client} />)
+    }
+</div>
+<script>
+    function accordionSetup() {
+        const accordionMenus = document.querySelectorAll(".accordion", ) as NodeListOf<HTMLElement>;
+        accordionMenus.forEach((accordionMenu) => {
+            const accordionButton = accordionMenu.querySelectorAll(".accordion__button") as NodeListOf<HTMLElement>;
+            const accordionContent = accordionMenu.querySelectorAll(".accordion__content") as NodeListOf<HTMLElement>;
+            accordionButton.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const target = this.dataset.target;
+                    const targetContent = accordionMenu.querySelector(`.accordion__content[data-target="${target}"]`);
+                    const targetTrigger = accordionMenu.querySelector(`.accordion__button[data-target="${target}"]`);
+                    if (targetContent.getAttribute('aria-expanded') === 'true') {
+                        targetContent.setAttribute('aria-expanded', 'false');
+                        targetTrigger.setAttribute('aria-expanded', 'false');
+                        return;
+                    }
+                    accordionContent.forEach(content => content.setAttribute('aria-expanded', 'false'))
+                        accordionButton.forEach(trigger => trigger.setAttribute('aria-expanded', 'false'))
+                        targetContent.setAttribute('aria-expanded', 'true');
+                        targetTrigger.setAttribute('aria-expanded', 'true');
+                })
+            })
+        });
+    }
+  
+    // runs on initial page load
+    accordionSetup();
+  
+    // runs on view transitions navigation
+    document.addEventListener("astro:after-swap", accordionSetup);
+  </script>

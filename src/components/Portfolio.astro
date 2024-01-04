@@ -1,0 +1,12 @@
+---
+interface Props {
+    title: string
+}
+import Clients from "./Clients.astro";
+
+const { title } = Astro.props
+---
+<section id="porfolio" class="py-16">
+    <h2 class="text-stone-900 dark:text-stone-50 text-4xl md:text-5xl font-semibold transition-all duration-300">{title}</h2>
+    <Clients />
+</section>
