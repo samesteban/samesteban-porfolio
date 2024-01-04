@@ -10,14 +10,27 @@ const { title } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Hola! Soy Sam Esteban, Diseñador web y Desarollador Front-End." />
+		<title>{title}</title>
+		<meta name="title" content="Sam Esteban | Diseñador web y Desarrollador Front-End" />
+		<meta name="description" content="Hola! Soy Sam Esteban, Diseñador y Desarrollador Front-End." />
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://samesteban.dev/" />
+		<meta property="og:title" content="Sam Esteban | Diseñador web y Desarrollador Front-End" />
+		<meta property="og:description" content="Hola! Soy Sam Esteban, Diseñador y Desarrollador Front-End." />
+		<meta property="og:image" content="/metatag.png" />
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://samesteban.dev/" />
+		<meta property="twitter:title" content="Sam Esteban | Diseñador web y Desarrollador Front-End" />
+		<meta property="twitter:description" content="Hola! Soy Sam Esteban, Diseñador y Desarrollador Front-End." />
+		<meta property="twitter:image" content="/metatag.png" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-		<title>{title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">	
 	</head>
 	<body class="relative overflow-y-auto">
 		<div class="transition-all duration-300 absolute top-0 z-[-2] h-full w-full bg-neutral-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,255,255,1),rgba(95,95,113,0.2))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(95,95,113,0.3),rgba(250,250,250,0))]"></div>
