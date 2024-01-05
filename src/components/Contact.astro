@@ -8,6 +8,8 @@ import LinkedIn from '../components/icons/LinkedIn.astro'
 import Github from './icons/Github.astro';
 import Download from './icons/Download.astro';
 
+import cvPdf from '../assets/cv/resume-Samuel_Bustos_C.pdf';
+
 const { title } = Astro.props
 ---
 <section id="contact" class="w-full pt-20 pb-4 flex flex-col items-start justify-center">
@@ -21,7 +23,7 @@ const { title } = Astro.props
             <span class="size-8"><Github /></span>
             <span class="text-lg">GitHub</span>
         </a>
-        <a href="/cv/resume_Samuel_Bustos_C.pdf" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 hover:text-stone-600 transition-all duration-150 hover:fill-stone-600" download>
+        <a href={cvPdf} class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 hover:text-stone-600 transition-all duration-150 hover:fill-stone-600" download>
             <span class="size-8"><Download /></span>
             <span class="text-lg">CV</span>
         </a>
