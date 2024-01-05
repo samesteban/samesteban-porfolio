@@ -6,16 +6,13 @@ interface Props {
 import Mail from '../components/icons/Mail.astro';
 import LinkedIn from '../components/icons/LinkedIn.astro'
 import Github from './icons/Github.astro';
+import Download from './icons/Download.astro';
 
 const { title } = Astro.props
 ---
 <section id="contact" class="w-full pt-20 pb-4 flex flex-col items-start justify-center">
     <h3 class="text-stone-900 dark:text-stone-50 text-4xl md:text-5xl font-semibold transition-all duration-300 w-full">{title}</h3>
     <div class="contact-list py-8 flex flex-col md:flex-row items-start md:items-center justify-start gap-x-12 gap-y-4">
-        <a href="mailto:hola@samesteban.dev" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 hover:text-stone-600 transition-all duration-150 hover:fill-stone-600">
-            <span class="size-8"><Mail /></span>
-            <span class="text-lg">hola@samesteban.dev</span>
-        </a>
         <a href="https://www.linkedin.com/in/sam-esteban/" target="_blank" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 hover:text-stone-600 transition-all duration-150 hover:fill-stone-600">
             <span class="size-8"><LinkedIn /></span>
             <span class="text-lg">LinkedIn</span>
@@ -23,6 +20,10 @@ const { title } = Astro.props
         <a href="https://github.com/samesteban" target="_blank" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 hover:text-stone-600 transition-all duration-150 hover:fill-stone-600">
             <span class="size-8"><Github /></span>
             <span class="text-lg">GitHub</span>
+        </a>
+        <a href="/cv/resume_Samuel_Bustos_C.pdf" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 hover:text-stone-600 transition-all duration-150 hover:fill-stone-600" download>
+            <span class="size-8"><Download /></span>
+            <span class="text-lg">CV</span>
         </a>
     </div>
 </section>
