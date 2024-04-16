@@ -1,7 +1,10 @@
 ---
 import Github from "./icons/Github.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
-import Mail from "./icons/Mail.astro"
+import Download from './icons/Download.astro';
+
+import cvPdf from '../assets/cv/resume-Sam_Esteban.pdf';
+// import Mail from "./icons/Mail.astro"
 ---
 <div id="mobile-menu" class="max-w-[380px] w-full bg-stone-50 dark:bg-[#101010] p-4 h-dvh fixed z-10 left-full data-[state=open]:-translate-x-full transition-all delay-75 duration-300 ease-in-out" data-role="mobile-menu" data-state="closed">
     <div class="close-area flex justify-end">
@@ -17,14 +20,17 @@ import Mail from "./icons/Mail.astro"
         </ul>
     </div>
     <div class="contact-list px-14 py-7 flex items-center justify-end gap-x-6">
-        <a href="mailto:hola@samesteban.dev" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 transition-all duration-150 hover:fill-stone-600">
+        <!-- <a href="mailto:hola@samesteban.dev" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 transition-all duration-150 hover:fill-stone-600">
             <span class="size-8"><Mail /></span>
-        </a>
+        </a> -->
         <a href="https://www.linkedin.com/in/sam-esteban/" target="_blank" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 transition-all duration-150 hover:fill-stone-600">
             <span class="size-8"><LinkedIn /></span>
         </a>
         <a href="https://github.com/samesteban" target="_blank" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 transition-all duration-150 hover:fill-stone-600">
             <span class="size-8"><Github /></span>
+        </a>
+        <a href={cvPdf} target="_blank" class="contact-info inline-flex items-center justify-start gap-1 text-stone-900 dark:text-stone-50 fill-stone-900 dark:fill-stone-50 transition-all duration-150 hover:fill-stone-600">
+            <span class="size-8"><Download /></span>
         </a>
     </div>
 </div>
