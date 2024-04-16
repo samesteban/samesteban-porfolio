@@ -26,14 +26,14 @@ export const ui = {
     "footer.copyright": "Diseñado y Desarrollado por Sam Esteban con ",
   },
   en: {
-    "tab.title": "Sam Esteban | Full Stack Developer, Front-End oriented",
+    "tab.title": "Sam Esteban | Full Stack Front-End oriented Developer",
     "nav.home": "Home",
     "nav.portfolio": "Portfolio",
     "nav.contact": "Contact",
     "hero.hi": "Hi, I am",
     "hero.name": "Sam Esteban",
     "hero.job":
-      "Web Designer and Full Stack Developer, based on Front-End with +10 years in experience.",
+      "Web Designer and Full Stack Front-End oriented Developer with +10 years in experience.",
     "hero.years": "I have 35 rotations to the sun",
     "hero.desk": "and my desktop is in Chile at the moment.",
     "hero.knowledge": "My knowledge have:",
@@ -41,6 +41,6 @@ export const ui = {
     "btn.viewPortfolio": "View Portfolio",
     "title.portfolio": "Portfolio",
     "title.contact": "Let's talk",
-    "footer.copyright": "Design and Developed by Sam Esteban with ",
+    "footer.copyright": "Designed and Developed by Sam Esteban with ",
   },
 } as const;
