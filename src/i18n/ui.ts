@@ -17,7 +17,7 @@ export const ui = {
     "hero.job":
       "Diseñador web y Desarrollador Full Stack, orientado a Front-End con +10 años de experiencia.",
     "hero.years": "Llevo 35 vueltas al astro rey",
-    "hero.desk": "y mi escritorio está en Chile.",
+    "hero.desk": "y mi escritorio está en Chile por el momento.",
     "hero.knowledge": "Mi conocimiento está basado en:",
     "btn.viewSite": "Ver Sitio",
     "btn.viewPortfolio": "Ver Portafolio",
@@ -35,7 +35,7 @@ export const ui = {
     "hero.job":
       "Web Designer and Full Stack Developer, based on Front-End with +10 years in experience.",
     "hero.years": "I have 35 rotations to the sun",
-    "hero.desk": "and my desktop is in Chile.",
+    "hero.desk": "and my desktop is in Chile at the moment.",
     "hero.knowledge": "My knowledge have:",
     "btn.viewSite": "View Site",
     "btn.viewPortfolio": "View Portfolio",
