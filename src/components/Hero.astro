@@ -1,17 +1,22 @@
 ---
 import IconsList from "./IconsList.astro";
 import Button from "./helpers/Button.astro";
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <section id="home" class="min-h-dvh flex flex-col items-start justify-center">
     <div class="w-full lg:w-10/12 pt-16">
-        <h1 class="text-stone-900 dark:text-stone-50 text-xl md:text-2xl lg:text-3xl xl:text-4xl 1xl:text-5xl font-semibold leading-tight transition-all duration-300">Hola, soy</h1>
-        <h2 class="text-stone-900 dark:text-stone-50 text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[144xl] 1xl:text-[154px] font-bold uppercase leading-[100%] transition-all duration-300">Sam Esteban</h2>
-        <h3 class="text-stone-900 dark:text-stone-50 text-lg md:text-xl lg:text-2xl xl:text-3xl 1xl:text-4xl font-semibold transition-all duration-300">Diseñador web y Desarrollador Front-End con +10 años de experiencia.</h3>
-        <p class="text-stone-900 dark:text-stone-50 text-lg md:text-xl lg:text-2xl xl:text-3xl 1xl:text-4xl font-semibold transition-all duration-300"><span class="text-stone-500 dark:text-stone-50/75">Llevo 35 vueltas al astro rey</span> y mi escritorio está en Chile.</p>
-        <p class="text-stone-900 dark:text-stone-50 text-lg md:text-xl lg:text-2xl xl:text-3xl 1xl:text-4xl font-semibold transition-all duration-300">Mi conocimiento está basado en:</p>
+        <h1 class="text-stone-900 dark:text-stone-50 text-xl md:text-2xl lg:text-3xl xl:text-4xl 1xl:text-5xl font-semibold leading-tight transition-all duration-300">{t('hero.hi')}</h1>
+        <h2 class="text-stone-900 dark:text-stone-50 text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[144xl] 1xl:text-[154px] font-bold uppercase leading-[100%] transition-all duration-300">{t('hero.name')}</h2>
+        <h3 class="text-stone-900 dark:text-stone-50 text-lg md:text-xl lg:text-2xl xl:text-3xl 1xl:text-4xl font-semibold transition-all duration-300">{t('hero.job')}</h3>
+        <p class="text-stone-900 dark:text-stone-50 text-lg md:text-xl lg:text-2xl xl:text-3xl 1xl:text-4xl font-semibold transition-all duration-300"><span class="text-stone-500 dark:text-stone-50/75">{t('hero.years')}</span> {t('hero.desk')}</p>
+        <p class="text-stone-900 dark:text-stone-50 text-lg md:text-xl lg:text-2xl xl:text-3xl 1xl:text-4xl font-semibold transition-all duration-300">{t('hero.knowledge')}</p>
         <IconsList />
         <div class="mt-8">
-            <Button id="go-to-porfolio" label="Ver Portafolio" url="#porfolio" hasIcon={true} target="_self" />
+            <Button id="go-to-porfolio" label={t('btn.viewPortfolio')} url="#porfolio" hasIcon={true} target="_self" />
         </div>
     </div>
 </section>

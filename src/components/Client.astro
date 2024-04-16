@@ -2,11 +2,15 @@
 interface Props {
     id: string,
     client: string,
-    description: string,
+    description: Object,
     tags: Array<string>,
     image: string,
     siteUrl: string
 }
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 import Pill from './helpers/Pill.astro';
 import Button from './helpers/Button.astro';
 
@@ -20,9 +24,9 @@ const { id, client, description, tags, image, siteUrl } = Astro.props;
             </div>
             <div class="description w-full md:w-4/12 pb-0 md:py-6 self-stretch flex flex-col items-start justify-between">
                 <p class="text-stone-900 dark:text-stone-50 transition-all duration-300 text-base 1xl:text-xl font-normal mb-6">
-                    {description}
+                    {description[lang]}
                 </p>
-                <Button label="Ver Sitio" url={siteUrl} hasIcon={false} target="_blank" />
+                <Button label={t('btn.viewSite')} url={siteUrl} hasIcon={false} target="_blank" />
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 
 import logoWhite from '../assets/img/logo-se-w.svg';
 import logoBlack from '../assets/img/logo-se-b.svg';
+import LanguagePicker from './LanguagePicker.astro';
 ---
 <header class="fixed w-full bg-gradient-to-b dark:from-stone-950 dark:via-stone-950/50 via-75% dark:to-stone-950/0 from-slate-50 via-stone-50/50 to-slate-50/0">
     <div class="flex flex-row justify-between items-center mx-auto w-full max-w-[1440px] pt-5 pb-6 px-5">
@@ -15,6 +16,7 @@ import logoBlack from '../assets/img/logo-se-b.svg';
             </span>
         </div>
         <div class="menu-btn flex items-center justify-end gap-8">
+            <LanguagePicker />
             <div class="flex flex-col justify-center ml-3">
                 <button id="theme-toggle" type="button" class="text-stone-900 dark:text-stone-50 hover:text-stone-500 dark:hover:text-stone-400 focus:outline-none rounded-lg text-sm p-2.5 transition-all duration-150">
                     <svg id="theme-toggle-dark-icon" class="hidden size-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>

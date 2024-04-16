@@ -1,0 +1,11 @@
+---
+import { languages } from "../i18n/ui";
+import { getLangFromUrl } from "../i18n/utils";
+
+const currLang = getLangFromUrl(Astro.url)
+---
+<div class="flex items-center justify-center w-max gap-3">
+    {Object.entries(languages).map(([lang, label], index: number) => (
+          <a class={`text-stone-900 dark:text-stone-50 text-sm uppercase ${lang == currLang ? `font-bold` : `font-light`}`} href={`/${lang}/`}>{label}</a>
+      ))}
+</div>

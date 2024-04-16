@@ -6,16 +6,20 @@ import Hero from '../components/Hero.astro';
 import Portfolio from '../components/Portfolio.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
----
 
-<Layout title="Sam Esteban | Diseñador y Desarrollador Front-End">
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<meta http-equiv="refresh" content="0;url=/es/" />
+<Layout title={t('tab.title')}>
 	<MenuMobile />
 	<div class="relative z-[1]">
 		<Header />
 		<main class="mx-auto w-full max-w-[1440px] px-5">
 			<Hero />
-			<Portfolio title="Portafolio" />
-			<Contact title="Conversemos" />
+			<Portfolio title={t('title.portfolio')} />
+			<Contact title={t('title.contact')} />
 		</main>
 		<Footer />
 	</div>

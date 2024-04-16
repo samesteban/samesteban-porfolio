@@ -1,10 +1,14 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
 import Github from "./icons/Github.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Download from './icons/Download.astro';
 
 import cvPdf from '../assets/cv/resume-Sam_Esteban.pdf';
 // import Mail from "./icons/Mail.astro"
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <div id="mobile-menu" class="max-w-[380px] w-full bg-stone-50 dark:bg-[#101010] p-4 h-dvh fixed z-10 left-full data-[state=open]:-translate-x-full transition-all delay-75 duration-300 ease-in-out" data-role="mobile-menu" data-state="closed">
     <div class="close-area flex justify-end">
@@ -14,9 +18,9 @@ import cvPdf from '../assets/cv/resume-Sam_Esteban.pdf';
     </div>
     <div class="menu-area px-14 pt-14 pb-7">
         <ul class="flex flex-col items-end justify-start text-right gap-y-6">
-            <li><a href="#home" class="text-stone-900 dark:text-stone-50 uppercase text-xl hover:text-stone-600 duration-150 transition-all">Inicio</a></li>
-            <li><a href="#porfolio" class="text-stone-900 dark:text-stone-50 uppercase text-xl hover:text-stone-600 duration-150 transition-all">Portafolio</a></li>
-            <li><a href="#contact" class="text-stone-900 dark:text-stone-50 uppercase text-xl hover:text-stone-600 duration-150 transition-all">Contacto</a></li>
+            <li><a href="#home" class="text-stone-900 dark:text-stone-50 uppercase text-xl hover:text-stone-600 duration-150 transition-all">{t('nav.home')}</a></li>
+            <li><a href="#porfolio" class="text-stone-900 dark:text-stone-50 uppercase text-xl hover:text-stone-600 duration-150 transition-all">{t('nav.portfolio')}</a></li>
+            <li><a href="#contact" class="text-stone-900 dark:text-stone-50 uppercase text-xl hover:text-stone-600 duration-150 transition-all">{t('nav.contact')}</a></li>
         </ul>
     </div>
     <div class="contact-list px-14 py-7 flex items-center justify-end gap-x-6">
