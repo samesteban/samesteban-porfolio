@@ -15,11 +15,11 @@ export const ui = {
     "hero.hi": "Hola, soy",
     "hero.name": "Sam Esteban",
     "hero.job":
-      "Diseñador web y Desarrollador Full Stack, orientado a Front-End con más de 10 años de experiencia.",
-    "hero.years": "Pronto completaré 36 vueltas al astro rey",
+      "Diseñador web y Desarrollador Full Stack, orientado a Front-End con más de 14 años de experiencia.",
+    "hero.years": "Pronto completaré 37 vueltas al astro rey",
     "hero.desk": "y mi escritorio actualmente está en Chile.",
     "hero.knowledge":
-      "A través de mi viaje profesional, he aprendido una varidad de herramientas para traer ideas a la vida.",
+      "A través de mi viaje profesional, he aprendido una variedad de herramientas para traer ideas a la vida.",
     "btn.viewSite": "Ver Sitio",
     "btn.viewPortfolio": "Ver Portafolio",
     "title.portfolio": "Portafolio",
@@ -34,8 +34,8 @@ export const ui = {
     "hero.hi": "Hi, I am",
     "hero.name": "Sam Esteban",
     "hero.job":
-      "a Web Designer and Full Stack Front-End oriented Developer with over 10 years of experience.",
-    "hero.years": "I will soon complete 36 trips around the sun,",
+      "a Web Designer and Full Stack Front-End oriented Developer with over 14 years of experience.",
+    "hero.years": "I will soon complete 37 trips around the sun,",
     "hero.desk": "and my desktop station is currently in Chile.",
     "hero.knowledge":
       "Throughout my professional journey, I have curated a variety of tools that empower me to bring visions to life.",
