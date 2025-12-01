@@ -23,7 +23,7 @@ const { id, client, description, tags, image, siteUrl } = Astro.props;
                 <img src={image} alt={client} class="w-full h-auto object-center object-contain shadow-xl" />
             </div>
             <div class="description w-full md:w-4/12 pb-0 md:py-6 self-stretch flex flex-col items-start justify-between md:pr-10">
-                <p class="text-stone-900 dark:text-stone-50 transition-all duration-300 text-base 1xl:text-xl font-normal mb-6">
+                <p class="text-stone-900 dark:text-stone-50 transition-all duration-300 text-sm 1xl:text-lg font-normal mb-6">
                     {description[lang]}
                 </p>
                 <Button label={t('btn.viewSite')} url={siteUrl} hasIcon={false} target="_blank" />
@@ -41,7 +41,7 @@ const { id, client, description, tags, image, siteUrl } = Astro.props;
             }
         </div>
     </div>
-    <div class="arrow pointer-events-none size-8 fill-stone-900 dark:fill-stone-50 peer-hover:opacity-90 transition-all duration-500 peer-aria-expanded/title:rotate-180 absolute right-0 top-6 md:top-8">
+    <div class="arrow pointer-events-none size-8 fill-stone-900 dark:fill-stone-50 peer-hover:opacity-90 transition-all duration-500 peer-aria-expanded/title:rotate-180 absolute right-0 bottom-6 md:bottom-8">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg>
     </div>
 </div>
