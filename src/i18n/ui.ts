@@ -7,19 +7,18 @@ export const defaultLang = "es";
 
 export const ui = {
   es: {
-    "tab.title":
-      "Sam Esteban | Diseñador y Desarrollador Full Stack, orientado a Front-End",
+    "tab.title": "Sam Esteban | Desarrollador WordPress Senior y Front-End",
     "nav.home": "Inicio",
     "nav.portfolio": "Portafolio",
     "nav.contact": "Contacto",
     "hero.hi": "Hola, soy",
     "hero.name": "Sam Esteban",
-    "hero.job":
-      "Diseñador web y Desarrollador Full Stack, orientado a Front-End con más de 14 años de experiencia.",
+    "hero.job": "Senior WordPress & Front-End Developer",
     "hero.years": "Tengo 37 vueltas al astro rey",
-    "hero.desk": "y mi escritorio actualmente está en Chile.",
+    "hero.desk":
+      "Actualmente radicado en Chile, trabajo con equipos y clientes de forma internacional.",
     "hero.knowledge":
-      "A través de mi viaje profesional, he aprendido una variedad de herramientas para traer ideas a la vida.",
+      "especializado en desarrollo a medida, performance y arquitecturas escalables.",
     "btn.viewSite": "Ver Sitio",
     "btn.viewPortfolio": "Ver Portafolio",
     "title.portfolio": "Portafolio",
@@ -27,18 +26,18 @@ export const ui = {
     "footer.copyright": "Diseñado y Desarrollado por Sam Esteban con ",
   },
   en: {
-    "tab.title": "Sam Esteban | Full Stack Front-End oriented Developer",
+    "tab.title": "Sam Esteban | Senior WordPress & Front-End Developer",
     "nav.home": "Home",
     "nav.portfolio": "Portfolio",
     "nav.contact": "Contact",
     "hero.hi": "Hi, I am",
     "hero.name": "Sam Esteban",
-    "hero.job":
-      "a Web Designer and Full Stack Front-End oriented Developer with over 14 years of experience.",
+    "hero.job": "Senior WordPress & Front-End Developer",
     "hero.years": "I have 37 rounds of the astro rover",
-    "hero.desk": "and my desktop station is currently in Chile.",
+    "hero.desk":
+      "Based in Chile. Working with international teams and clients.",
     "hero.knowledge":
-      "Throughout my professional journey, I have curated a variety of tools that empower me to bring visions to life.",
+      "specialized in custom development, performance, and scalable architectures.",
     "btn.viewSite": "View Site",
     "btn.viewPortfolio": "View Portfolio",
     "title.portfolio": "Portfolio",
